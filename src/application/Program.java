@@ -12,7 +12,8 @@ public class Program {
 
 	public static void main(String[] args) {
 		
-		// 5° tratamento de exceção personalizado com "Programação Defensiva(tratando as excessões no começo do método construtor "
+		// 6° tratamento de exceção personalizado com "RuntimeException", sem as declarações de tratamento no construtor e
+		// nos métodos e mesmo assim impedindo que o programa quebre.
 		
 		Scanner sc = new Scanner(System.in);
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
@@ -46,6 +47,9 @@ public class Program {
 		}
 		catch (DomainException e) {
 			System.out.println("Error in reservation: " + e.getMessage());
+		}
+		catch (RuntimeException e) {
+			System.out.println("Unexpected error");
 		}
 		
 		sc.close();	
