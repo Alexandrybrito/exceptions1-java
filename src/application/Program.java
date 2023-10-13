@@ -12,7 +12,7 @@ public class Program {
 
 	public static void main(String[] args) {
 		
-		// 3° tratamento de exceção com boa performance	
+		// 5° tratamento de exceção personalizado com "Programação Defensiva(tratando as excessões no começo do método construtor "
 		
 		Scanner sc = new Scanner(System.in);
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
