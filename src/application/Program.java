@@ -6,12 +6,14 @@ import java.util.Date;
 import java.util.Scanner;
 
 import model.entities.Reservation;
+import model.exceptions.DomainException;
 
 public class Program {
 
 	public static void main(String[] args) {
 		
-			
+		// 3° tratamento de exceção com boa performance	
+		
 		Scanner sc = new Scanner(System.in);
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 		
@@ -42,7 +44,7 @@ public class Program {
 		catch (ParseException e) {
 			System.out.println("Invalid date format");
 		}
-		catch (IllegalArgumentException e) {
+		catch (DomainException e) {
 			System.out.println("Error in reservation: " + e.getMessage());
 		}
 		
